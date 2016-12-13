@@ -1,2 +1,3 @@
 # EpilepsyPrediction
-Harvard University Stat 
+Harvard University Stat121a Final Project 
+Predicting Epilepsy
