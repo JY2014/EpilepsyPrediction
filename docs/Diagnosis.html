@@ -11839,7 +11839,7 @@ $( document ).ready(code_toggle);
 <h1 id="Chapter-3.-Predicting-Epilepsy-Status">Chapter 3. Predicting Epilepsy Status<a class="anchor-link" href="#Chapter-3.-Predicting-Epilepsy-Status">&#182;</a></h1><hr>
 <p><font size="3"><p>After imputing missing values, we built classification models to predict epilepsy status using the survey data. We tuned parameters for <b> Linear Discriminant Analysis (LDA), Quadratic Discriminant Anlysis (QDA), Weighted Logistic Regression and Random Forest </b>. Because the dataset is <b>highly imbalanced</b>, with the ratio of epilepsy to non-epilepsy respondents of 1 : 100, we tuned the class weight or priors in addition to regularization parameters, and used the <b> F1 score </b> instead of the overall accuracy rate to evaluate our models.</p></p>
 <p><p></p>
-The model selection procedure and results are shown in details below. &lt;/font&gt;</p>
+The model selection procedure and results are shown in details below.</p>
 
 </div>
 </div>
@@ -12359,9 +12359,8 @@ When fitting the logistic regression to our large dataset (which includes more t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><p><font size="3"><b> ROC plot of the models</b></font></p></p>
-<p><p><font size="3"> Receiver Operating Characteristic (ROC) curves of the models were plotted. ROC is a graphical plot that illustrates the performance of a classifier system as the discrimination threshold varies. The curve is created by plotting the true positive rate (TPR) against the false positive rate (FPR) at different threshold values. The ROC curve hugging the upper left corner suggests that the model performs well on the classification. </p>&lt;/font&gt;</p>
-
+<p><font size="3"><b> ROC plot of the models</b></font></p>
+<p><font size="3"> Receiver Operating Characteristic (ROC) curves of the models were plotted. ROC is a graphical plot that illustrates the performance of a classifier system as the discrimination threshold varies. The curve is created by plotting the true positive rate (TPR) against the false positive rate (FPR) at different threshold values. The ROC curve hugging the upper left corner suggests that the model performs well on the classification. </p>
 </div>
 </div>
 </div>
@@ -12978,7 +12977,7 @@ AAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="3.4.Feature-Importance">3.4.Feature Importance<a class="anchor-link" href="#3.4.Feature-Importance">&#182;</a></h2><p><font size="3"> Based on the comparison above, we decided examine important features in the weighted logistic regression model. Examining the coefficients for each feature in this model may help us identify risk factors for epilespy. However, the <b> top-ranked features in the list are probably caused by epilepsy </b> instead of being able to predict epilepsy, reflecting the <b> limitations of our dataset as a single-point observation </b>. 
+<h2 id="3.4.Feature-Importance">3.4.Feature Importance<a class="anchor-link" href="#3.4.Feature-Importance">&#182;</a></h2><p><font size="3"> Based on the comparison above, we decided to examine important features in the weighted logistic regression model. Examining the coefficients for each feature in this model may help us identify risk factors for epilespy. However, the <b> top-ranked features in the list are probably caused by epilepsy </b> instead of being able to predict epilepsy, reflecting the <b> limitations of our dataset as a single-point observation </b>. 
 
 
 Examples of the top-ranked predictors include:
@@ -13062,7 +13061,8 @@ Examples of the top-ranked predictors include:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Our-next-step-was-to-address-whether-we-could-predict-the-quality-of-life-in-epilepsy-patients.">Our next step was to address whether we could predict the quality of life in epilepsy patients.<a class="anchor-link" href="#Our-next-step-was-to-address-whether-we-could-predict-the-quality-of-life-in-epilepsy-patients.">&#182;</a></h3>
+<h3 id="Our-next-step-was-to-address-whether-we-could-predict-the-quality-of-life-in-epilepsy-patients.">Our next step was to address whether we could predict the quality of life in epilepsy patients.<a class="anchor-link" href="#Our-next-step-was-to-address-whether-we-could-predict-the-quality-of-life-in-epilepsy-patients.">&#182;</a></h3><hr>
+
 </div>
 </div>
 </div>
