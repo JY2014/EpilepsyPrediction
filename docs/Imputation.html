@@ -11876,7 +11876,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#### USING NSCH 2007 Data and NSCH 2007 Variable Description PDF, explore data missingness</span>
@@ -11900,6 +11900,9 @@ $( document ).ready(code_toggle);
 <span class="kn">import</span> <span class="nn">itertools</span> <span class="kn">as</span> <span class="nn">it</span>
 <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="o">%</span> <span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 
 <span class="c1"># Be able to print more text</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span> <span class="o">=</span> <span class="mi">1000</span>  
@@ -12914,14 +12917,14 @@ iigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font size = "3">Our data were downloaded from the [CDC website](https://www.cdc.gov/nchs/slaits/nsch.htm) in <b>SAS4BDAT format</b>. We used the program SAS to read the data and convert it to a CSV file. This CSV file was then read into Python using Pandas. In a separate script, we processed the NSCH 2007 Variable Description PDF to create a CSV containing variable names and their associated questions. </font></p>
+<p><font size = "3">Our data were downloaded from the <a href = "https://www.cdc.gov/nchs/slaits/nsch.htm">CDC website</a> in <b>SAS4BDAT format</b>. We used the program SAS to read the data and convert it to a CSV file. This CSV file was then read into Python using Pandas. In a separate script, we processed the NSCH 2007 Variable Description PDF to create a CSV containing variable names and their associated questions. </font></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load NSCH 2007</span>
@@ -12944,14 +12947,6 @@ iigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>//anaconda/lib/python2.7/site-packages/IPython/core/interactiveshell.py:2717: DtypeWarning: Columns (2,3,4,9,232,233,235) have mixed types. Specify dtype option on import or set low_memory=False.
-  interactivity=interactivity, compiler=compiler, result=result)
-</pre>
-</div>
-</div>
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
