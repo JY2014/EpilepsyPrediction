@@ -11748,7 +11748,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
@@ -11776,7 +11776,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <script>
@@ -11855,8 +11855,7 @@ $( document ).ready(code_toggle);
 <li><a href="#4.4.Model-Comparison">4.4. Model Comparison</a></li>
 <li><a href="#4.5.Feature-Importance-and-Multicollinearity">4.5. Feature Importance and Multicollinearity</a></li>
 <li><a href="#4.6.Principal-Component-Analysis">4.6. Principal Component Analysis</a></li>
-<li><a href="#4.7.Multiclass-Classification">4.7. Multiclass Classification</a>
-&lt;/font&gt;</li>
+<li><a href="#4.7.Multiclass-Classification">4.7. Multiclass Classification</a></li>
 </ul>
 <hr>
 
@@ -11997,18 +11996,15 @@ $( document ).ready(code_toggle);
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="4.1.Construct-Response-Variable">4.1.Construct Response Variable<a class="anchor-link" href="#4.1.Construct-Response-Variable">&#182;</a></h2><p><font size = "3">First, we constructed a composite metric of quality of life in children based on questions in our dataset. We selected the following questions and <b>summed together the number of YES responses for each child</b>.</p>
-<p><i></p>
-<ul>
-<li>Do [Child]’s health conditions interfere with [his/her] ability to:<ul>
-<li>Play with other children?</li>
-<li>Go on outings such as to the park or family gatherings?</li>
-<li>Make friends?</li>
-<li>Attend school on a regular basis?</li>
-<li>Participate in sports, clubs, or other organized activities?
-&lt;/i&gt;</li>
-</ul>
-</li>
-</ul>
+<p><i>
+Do [Child]’s health conditions interfere with [his/her] ability to:</p>
+<p><ul>
+    <li> Play with other children?</li>
+    <li> Go on outings such as to the park or family gatherings?</li>
+    <li> Make friends?</li>
+    <li> Attend school on a regular basis?</li>
+    <li>Participate in sports, clubs, or other organized activities?</li>
+</ul>&lt;/i&gt;</p>
 <p></p>
 <p>A large number of YES responses indicates a diminished ability to participate in age-appropriate social and physical activities, and may serve as a proxy for quality of life. Then, we plotted the <b>distribution of this response variable within epilepsy children</b>. We noticed that approximately half of epilepsy children had zero YES answers, with the other half of the population distributed among 1, 2, and 3 YES answers. Given this distribution, we first sought to <b>perform binary classify children with 0 vs. 1 or more YES answers</b>. Later, we performed <b>multiclass classification</b>.</p>
 </div>
