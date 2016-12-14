@@ -11748,7 +11748,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
@@ -11776,7 +11776,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <script>
@@ -11836,7 +11836,7 @@ $( document ).ready(code_toggle);
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Chapter-4.-Predicting-Epilepsy-Status">Chapter 4. Predicting Epilepsy Status<a class="anchor-link" href="#Chapter-4.-Predicting-Epilepsy-Status">&#182;</a></h1><hr>
+<h1 id="Chapter-3.-Predicting-Epilepsy-Status">Chapter 3. Predicting Epilepsy Status<a class="anchor-link" href="#Chapter-3.-Predicting-Epilepsy-Status">&#182;</a></h1><hr>
 <p><font size="3"><p>After the missing values were imputed, models were built to predict epilepsy status using the survey data. Multiple classification models were tuned, including Linear Discriminant Analysis (LDA), Quadratic Discriminant Anlysis (QDA), Weighted Logistic Regression and Random Forest. Due to that the dataset is highly imbalanced with the ratio of epilepsy to non-epilepsy respondents of 1 : 100, we tuned the class weight or priors in addition to regularization parameters, and determined to use F1 score instead of the overall accuracy rate to evaluate our models.</p></p>
 <p><p></p>
 The model selection procedure and results are shown in details below. &lt;/font&gt;</p>
@@ -11888,10 +11888,10 @@ The model selection procedure and results are shown in details below. &lt;/font&
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font size = '3'></p>
 <ul>
-<li><a href="#4.1.Read-the-imputed-dataset">4.1. Read the imputed dataset</a></li>
-<li><a href="#4.2.Model-Selection">4.2. Model Selection</a></li>
-<li><a href="#4.3.Model-Comparison">4.3. Model Comparison</a></li>
-<li><a href="#4.4.Feature-Importance">4.4. Feature Importance</a></li>
+<li><a href="#3.1.Read-the-imputed-dataset">3.1. Read the imputed dataset</a></li>
+<li><a href="#3.2.Model-Selection">3.2. Model Selection</a></li>
+<li><a href="#3.3.Model-Comparison">3.3. Model Comparison</a></li>
+<li><a href="#3.4.Feature-Importance">3.4. Feature Importance</a></li>
 </ul>
 <hr>
 
@@ -11914,7 +11914,7 @@ The model selection procedure and results are shown in details below. &lt;/font&
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="4.1.Read-the-imputed-dataset">4.1.Read the imputed dataset<a class="anchor-link" href="#4.1.Read-the-imputed-dataset">&#182;</a></h2><p><p></p>
+<h2 id="3.1.Read-the-imputed-dataset">3.1.Read the imputed dataset<a class="anchor-link" href="#3.1.Read-the-imputed-dataset">&#182;</a></h2><p><p></p>
 <font size = "3">The imputed data set saved from the previous chapter was read in. The respondents who did not provide information to the epilepsy questions were removed from the analysis, and one-hot encoding was applied to categorical variables.</font></p>
 
 </div>
@@ -11971,11 +11971,21 @@ The model selection procedure and results are shown in details below. &lt;/font&
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="4.2.Model-Selection">4.2.Model Selection<a class="anchor-link" href="#4.2.Model-Selection">&#182;</a></h2><p><p></p>
+<h2 id="3.2.Model-Selection">3.2.Model Selection<a class="anchor-link" href="#3.2.Model-Selection">&#182;</a></h2><p><p></p>
 <font size = "3"><p>As our goal is to accurately predict epilepsy status for diagnosis purpose, we need to consider both true positive and true negative. Therefore, instead of just taking the overall accuracy rate (true positive) into account, we evaluated our models based on F1 score, which combines the information of both precision and recall. </p></p>
 <p><p></p>
 $$ F1 = \frac{2 \times Precison \times Recall}{Precision + Recall} $$</p>
 <p><p>After fitting several models using cross validation, we found out that weighted logistic regression ( C = 0.001, Class_weight = {0:1, 1:10.0} ) would give us the highest F1 score, which reached around 0.26. Moreover, the accuracy rate was also very high, whcih was around 0.98. Considering that this is a survey dataset with thousands of features, we were satisfied with the model we got.</p>&lt;/font&gt;</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><font size = "2"><b><i>PRESS BUTTON ON TOP OF THE PAGE TO SEE CODE</i></b></font></p>
 
 </div>
 </div>
@@ -12161,9 +12171,9 @@ $$ F1 = \frac{2 \times Precison \times Recall}{Precision + Recall} $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><font size = "4"> <b> Logistic regression (with subsampling)</b></font>
+<li><font size = "4"> <b> Logistic Regression (with subsampling)</b></font>
 <p></p>
-  <font size = "3"><p>We performed Quadratic Discriminant Analysis (QDA) using five-fold cross-validation. We tuned several parameters for logistic regression, including the regularization parameter $C$, class weights and penalty types (L1 or L2). Furthermore, we encountered the problem of high computational requirement during the process of fitting logistic regression to the dataset, because the dataset includes more than 90,000 entries and 1,500 features. In order to allocate our time and computational capacity more efficiently, we randomly selected a subsample of the non-epilepsy group to use in the analysis. We tested the subsample size of different ratios of non-epilepsy to epilepsy respondents, including 10:1 and 20:1. The subsample was combined with the epilepsy group for the model selection. The optimal values of the parameters were selected based on five-fold cross-validation, and the model was evaluated on the entire dataset. The best logistic regression model generates an F1 score of 0.26 and an overall accuracy of 0.97.</p></font></li>
+  <font size = "3"><p>We performed weighted logistic regression using five-fold cross-validation. We tuned several parameters for logistic regression, including the regularization parameter $C$, class weights and penalty types (L1 or L2). Furthermore, we encountered the problem of high computational requirement during the process of fitting logistic regression to the dataset, because the dataset includes more than 90,000 entries and 1,500 features. In order to allocate our time and computational capacity more efficiently, we randomly selected a subsample of the non-epilepsy group to use in the analysis. We tested the subsample size of different ratios of non-epilepsy to epilepsy respondents, including 10:1 and 20:1. The subsample was combined with the epilepsy group for the model selection. The optimal values of the parameters were selected based on five-fold cross-validation, and the model was evaluated on the entire dataset. The best logistic regression model generates an F1 score of 0.26 and an overall accuracy of 0.97.</p></font></li>
 </ul>
 
 </div>
@@ -12261,7 +12271,7 @@ $$ F1 = \frac{2 \times Precison \times Recall}{Precision + Recall} $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><font size = "4"> <b>Random forest</b></font>
+<li><font size = "4"> <b>Random Forest</b></font>
 <p></p>
   <font size = "3"><p>We also performed random forest using five-fold cross-validation. The tuned parameters include 'number of trees', 'class weights' and 'max_depth', and the best model was selected based on F1 scores. The best Random Forest model had an overall accuracy rate of 0.98, with F1 score to be 0.19. The F1 score was lower compared to the best weighted logistic regression.</li>
 </ul>
@@ -12339,7 +12349,7 @@ $$ F1 = \frac{2 \times Precison \times Recall}{Precision + Recall} $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.3.Model-Comparison">4.3.Model Comparison<a class="anchor-link" href="#4.3.Model-Comparison">&#182;</a></h2><p><font size="3">After the best parameters were selected for Linear Discriminant Analysis (LDA), Quadratic Discriminant Analysis (QDA), Logistic Regression and Random Forest. The results from all the models were compared, and the best model was selected based on the highest F1 score. The regularized weighted logistic regression provided the highest F1 score of 0.26 as well as a comparabily high accuracy rate of 0.97. Therefore, <b>the regularized weighted logistic regression was selected to be the best model for the prediction of epilepsy diagnosis.</b></p>
+<h2 id="3.3.Model-Comparison">3.3.Model Comparison<a class="anchor-link" href="#3.3.Model-Comparison">&#182;</a></h2><p><font size="3">After the best parameters were selected for Linear Discriminant Analysis (LDA), Quadratic Discriminant Analysis (QDA), Logistic Regression and Random Forest. The results from all the models were compared, and the best model was selected based on the highest F1 score. The regularized weighted logistic regression provided the highest F1 score of 0.26 as well as a comparabily high accuracy rate of 0.97. Therefore, <b>the regularized weighted logistic regression was selected to be the best model for the prediction of epilepsy diagnosis.</b></p>
 <p><p></p></p>
 
 </div>
@@ -14139,7 +14149,7 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.4.Feature-Importance">4.4.Feature Importance<a class="anchor-link" href="#4.4.Feature-Importance">&#182;</a></h2><p><font size="3"> Based on the comparison above, we decided to choose the weighted logistic regression model to indentify risk factors associated with epilepsy. Higher absolute value of the coefficient of a feature suggests that the feature is more associated with the response variable. However, the top-ranked features in the list are probably caused by epilepsy instead of being able to predict epilepsy, which also reflects the limitation of our dataset as a single-point observation. Therefore, it would limit the prediction function of our model in real world status.</p>
+<h2 id="3.4.Feature-Importance">3.4.Feature Importance<a class="anchor-link" href="#3.4.Feature-Importance">&#182;</a></h2><p><font size="3"> Based on the comparison above, we decided to choose the weighted logistic regression model to indentify risk factors associated with epilepsy. Higher absolute value of the coefficient of a feature suggests that the feature is more associated with the response variable. However, the top-ranked features in the list are probably caused by epilepsy instead of being able to predict epilepsy, which also reflects the limitation of our dataset as a single-point observation. Therefore, it would limit the prediction function of our model in real world status.</p>
 </div>
 </div>
 </div>
@@ -14245,11 +14255,11 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%%</span><span class="k">html</span>
-&lt;a href=&quot;https://jy2014.github.io/EpilepsyPrediction/Imputation.html&quot; target=&quot;_self&quot;&gt;Chapter 3. Data Imputation&lt;/a&gt;
+&lt;a href=&quot;https://jy2014.github.io/EpilepsyPrediction/Imputation.html&quot; target=&quot;_self&quot;&gt;Chapter 2. Data Imputation&lt;/a&gt;
 </pre></div>
 
 </div>
@@ -14263,7 +14273,7 @@ AAAAAElFTkSuQmCC
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<a href="https://jy2014.github.io/EpilepsyPrediction/Imputation.html" target="_self">Chapter 3. Data Imputation</a>
+<a href="https://jy2014.github.io/EpilepsyPrediction/Imputation.html" target="_self">Chapter 2. Data Imputation</a>
 </div>
 
 </div>
@@ -14274,11 +14284,11 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%%</span><span class="k">html</span>
-&lt;a href=&quot;https://jy2014.github.io/EpilepsyPrediction/QualityOfLife.html&quot; target=&quot;_self&quot;&gt;Chapter 5. Quality of Life&lt;/a&gt;
+&lt;a href=&quot;https://jy2014.github.io/EpilepsyPrediction/QualityOfLife.html&quot; target=&quot;_self&quot;&gt;Chapter 4. Quality of Life&lt;/a&gt;
 </pre></div>
 
 </div>
@@ -14292,7 +14302,7 @@ AAAAAElFTkSuQmCC
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<a href="https://jy2014.github.io/EpilepsyPrediction/QualityOfLife.html" target="_self">Chapter 5. Quality of Life</a>
+<a href="https://jy2014.github.io/EpilepsyPrediction/QualityOfLife.html" target="_self">Chapter 4. Quality of Life</a>
 </div>
 
 </div>
@@ -14303,7 +14313,7 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%%</span><span class="k">html</span>
