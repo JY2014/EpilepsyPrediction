@@ -11996,15 +11996,16 @@ $( document ).ready(code_toggle);
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="4.1.Construct-Response-Variable">4.1.Construct Response Variable<a class="anchor-link" href="#4.1.Construct-Response-Variable">&#182;</a></h2><p><font size = "3">First, we constructed a composite metric of quality of life in children based on questions in our dataset. We selected the following questions and <b>summed together the number of YES responses for each child</b>.</p>
-<p><i>
-Do [Child]’s health conditions interfere with [his/her] ability to:</p>
-<p><ul>
+<p></p>
+Do [Child]’s health conditions interfere with [his/her] ability to:
+<ul>
     <li> Play with other children?</li>
     <li> Go on outings such as to the park or family gatherings?</li>
     <li> Make friends?</li>
     <li> Attend school on a regular basis?</li>
     <li>Participate in sports, clubs, or other organized activities?</li>
-</ul>&lt;/i&gt;</p>
+</ul>
+
 <p></p>
 <p>A large number of YES responses indicates a diminished ability to participate in age-appropriate social and physical activities, and may serve as a proxy for quality of life. Then, we plotted the <b>distribution of this response variable within epilepsy children</b>. We noticed that approximately half of epilepsy children had zero YES answers, with the other half of the population distributed among 1, 2, and 3 YES answers. Given this distribution, we first sought to <b>perform binary classify children with 0 vs. 1 or more YES answers</b>. Later, we performed <b>multiclass classification</b>.</p>
 </div>
@@ -13130,7 +13131,7 @@ p+A4juMk+H+gQXl8C4tYawAAAABJRU5ErkJggg==
 <h2 id="4.5.Feature-Importance-and-Multicollinearity">4.5.Feature Importance and Multicollinearity<a class="anchor-link" href="#4.5.Feature-Importance-and-Multicollinearity">&#182;</a></h2><p><p></p>
 <font size = "3">When training predictive models, <b>Multicollinearity</b>, which refers to correlations among predictors, can complicate the process of identifying important predictors and decrease the stability of the models. Large health data sets like the NSCH commonly have multicollinearity because, for example, health conditions and demographics are correlated with each other. While multicollinearity may not affect the overall fit or accuracy of the model, it is difficult to interpret the effect of a given predictor on the response variable if the predictor is collinear with other predictors.</p>
 <p>Given our high classification accuracy, we aimed to identify the most important features and interpret the relationship between patient characteristics and quality of life. To rank features by importance in our best model, the Random Forest, we calculated <strong>feature importance</strong> from the Gini Index, and found that the ranking of feature importances changed each time we fit the dataset. This instability indicated that our dataset may suffer from multicollinearity, so we calculated the <strong>Variance Inflation Factor (VIF)</strong> using the statsmodels package in Python. For the $i$th predictor in a dataset, the VIF is calculated by fitting a least-squares regression on the other predictors and calculating the coefficient of determination ($R^2_i$).</p>
-$$VIF_i = \frac{1}{1 - R^2_i}$$<p>The VIF describes how much the variance of an estimated regression coefficient is increased because of collinearity. From our boxplot of VIF scores for each of the 39 features, we see that many features have VIF scores larger than 5. Thus, <b>our dataset displays significant multicollinearity, which reduces the interpretability of our model.</b>&lt;/font&gt;</p>
+$$VIF_i = \frac{1}{1 - R^2_i}$$<p>The VIF describes how much the variance of an estimated regression coefficient is increased because of collinearity. From our boxplot of VIF scores for each of the 39 features, we see that many features have VIF scores larger than 5. Thus, <b>our dataset displays significant multicollinearity, which reduces the interpretability of our model.</b></p>
 
 </div>
 </div>
@@ -13421,7 +13422,7 @@ JKmCISlJUgVDUpKkCoakJEkVDElJkioYkpIkVfj/rvcp+1Y9voAAAAAASUVORK5CYII=
 <h2 id="4.6.Principal-Component-Analysis">4.6.Principal Component Analysis<a class="anchor-link" href="#4.6.Principal-Component-Analysis">&#182;</a></h2><p><p></p>
 <font size = "3">As shown above, our dataset has significant multicollinearity between predictors. To create an orthogonal set of predictors, and thus solve the problem of multicollinearity, we used Principal Components Analysis to transform our (one hot encoded) dataset, and then fit and cross-validated Logistic Regression on 1, 2, or 3 of the first Principal Components. Because all of our models performed with high accuracy, we decided to use Logistic Regression to reduce computation time. The <b>cross-validated accuracy of Logistic Regression using only the first PC was around 80%</b>, which is close to the accuracy of fitting classifiers on the full set of 39 predictors. Because using only one component gives us high accuracy, and our original predictors are highly correlated, this means that the 1st PCA component captures the separation between the classes in addition to capturing variability in predictors.</p>
 <p><p></p>
-<b>Adding additional PC components to our model did not improve accuracy</b>. Therefore, using a single or a few PCA components has comparable accuracy to the above models. &lt;/font&gt;</p>
+<b>Adding additional PC components to our model did not improve accuracy</b>. Therefore, using a single or a few PCA components has comparable accuracy to the above models.</p>
 
 </div>
 </div>

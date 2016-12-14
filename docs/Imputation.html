@@ -13727,14 +13727,13 @@ EAQ5UWhABUEQBEFQdyJCEwRBEARB7QmHJgiCIAiC2hMOTRAEQRAEtSccmiAIgiAIak84NEEQBEEQ
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="2.5.Strategy-of-Handling-Categorical-Indicators-and-Missing-Data">2.5.Strategy of Handling Categorical Indicators and Missing Data<a class="anchor-link" href="#2.5.Strategy-of-Handling-Categorical-Indicators-and-Missing-Data">&#182;</a></h2><p><p></p>
-<font size = "3"><p>Given that our dataset contains many missing values, we had to consider whether the features containing too many missing values would influence the performance of the model in predicting epilepsy diagnosis. Therefore, if we tried to impute the missing values of dataset, we need to consider thoughtfully for both design of survey and nature of questions instead of just simply filling the dataset with mean, zeros or majority vote.<p></p>
-<p><p></p></p>
-<p><p>Options for handling missing data include dropping all features or entries with missing values, which would reduce the size of our training set significantly. Alternatively, to preserve the size of the dataset, several imputation methods including mean, zeros, majority vote or even fitting models based on other features without missing values can be used to fill in missing data. In our dataset, most predictors are categorical (including questions with a few response options) and take on a small set of values, while some other predictors are quantitative (ex: height and weight).<p></p>
-<p><p></p></p>
-<p><p><b>Our methods are summarized in the below table, and are described in more detail in the next three sections</b>.</p></p>
-<p><p></p>&lt;/font&gt;</p>
-
+<h2 id="2.5.Strategy-of-Handling-Categorical-Indicators-and-Missing-Data">2.5.Strategy of Handling Categorical Indicators and Missing Data<a class="anchor-link" href="#2.5.Strategy-of-Handling-Categorical-Indicators-and-Missing-Data">&#182;</a></h2><p></p>
+<font size = "3"><p>Given that our dataset contains many missing values, we had to consider whether the features containing too many missing values would influence the performance of the model in predicting epilepsy diagnosis. Therefore, if we tried to impute the missing values of dataset, we need to consider thoughtfully for both design of survey and nature of questions instead of just simply filling the dataset with mean, zeros or majority vote.<p>
+<p></p>
+<p>Options for handling missing data include dropping all features or entries with missing values, which would reduce the size of our training set significantly. Alternatively, to preserve the size of the dataset, several imputation methods including mean, zeros, majority vote or even fitting models based on other features without missing values can be used to fill in missing data. In our dataset, most predictors are categorical (including questions with a few response options) and take on a small set of values, while some other predictors are quantitative (ex: height and weight).<p>
+<p></p>
+<p><b>Our methods are summarized in the below table, and are described in more detail in the next three sections</b>.</p>
+<p></p>
 </div>
 </div>
 </div>
@@ -13764,11 +13763,10 @@ EAQ5UWhABUEQBEFQdyJCEwRBEARB7QmHJgiCIAiC2hMOTRAEQRAEtSccmiAIgiAIak84NEEQBEEQ
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="2.6.Dropping-Extreme-Missingness-and-Uncompleted-Surveys">2.6.Dropping Extreme Missingness and Uncompleted Surveys<a class="anchor-link" href="#2.6.Dropping-Extreme-Missingness-and-Uncompleted-Surveys">&#182;</a></h2><p><p></p></p>
-<p><p><font size = "3">To handle the missing data, we first ranked features by the proportion missing and examined the data for a natural cutoff. There are only 5 features with more than 60% of values missing, most of which are related to family immigration status. Because this missingness affects a large proprtion of entries, and because we did not believe immigration to be a critical predictor of epilepsy status or quality of life, we decided to <b>drop columns with more than 60% missingness</b>. Therefore, the next feature with most missingness was Poverty Level, which describes household income based on an 8-level scale determined by the Department of Health and Human Services. The imputation of Poverty Level is described in Section 2.8. <p></p>
-<p><p></p></p>
-<p><p>To handle <b>indicators of incomplete surveys</b>, including P, A, and D, we noticed that only 1 column contained A or D values, indicating that these questions were added or deleted after the survey started. Because these constituted a small portion of the dataset, we decided to remove this column. In addition, there were only 5 rows (respondents) with any P values (indicating a prematurely ended interview), so we decided to drop these respondents due to their small number. </p>&lt;/font&gt;</p>
-
+<h2 id="2.6.Dropping-Extreme-Missingness-and-Uncompleted-Surveys">2.6.Dropping Extreme Missingness and Uncompleted Surveys<a class="anchor-link" href="#2.6.Dropping-Extreme-Missingness-and-Uncompleted-Surveys">&#182;</a></h2><p></p>
+<p><font size = "3">To handle the missing data, we first ranked features by the proportion missing and examined the data for a natural cutoff. There are only 5 features with more than 60% of values missing, most of which are related to family immigration status. Because this missingness affects a large proprtion of entries, and because we did not believe immigration to be a critical predictor of epilepsy status or quality of life, we decided to <b>drop columns with more than 60% missingness</b>. Therefore, the next feature with most missingness was Poverty Level, which describes household income based on an 8-level scale determined by the Department of Health and Human Services. The imputation of Poverty Level is described in Section 2.8. <p>
+<p></p>
+<p>To handle <b>indicators of incomplete surveys</b>, including P, A, and D, we noticed that only 1 column contained A or D values, indicating that these questions were added or deleted after the survey started. Because these constituted a small portion of the dataset, we decided to remove this column. In addition, there were only 5 rows (respondents) with any P values (indicating a prematurely ended interview), so we decided to drop these respondents due to their small number. </p>
 </div>
 </div>
 </div>
@@ -13974,7 +13972,7 @@ New shape: (90576, 292)
 <li>Linear Discriminant Analysis</li>
 <li>Quadratic Discriminant Analysis</li>
 </ul>
-<p>An alternative approach would have been to perform <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3074241/">multiple imputation</a>, which produces multiple imputed datasets, allowing us to get confidence intervals on population estimates. We attempted this approach in R and Python and saw that the computation time exceeded 10 hours for our large dataset, so we decided to use single imputation models as described.&lt;/font&gt;</p>
+<p>An alternative approach would have been to perform <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3074241/">multiple imputation</a>, which produces multiple imputed datasets, allowing us to get confidence intervals on population estimates. We attempted this approach in R and Python and saw that the computation time exceeded 10 hours for our large dataset, so we decided to use single imputation models as described.</p>
 <h3 id="NOTE:-Imputation-with-different-models-was-done-on-different-computers,-because-each-takes-more-than-1-hour-to-complete-due-to-the-size-of-the-dataset!">NOTE: Imputation with different models was done on different computers, because each takes more than 1 hour to complete due to the size of the dataset!<a class="anchor-link" href="#NOTE:-Imputation-with-different-models-was-done-on-different-computers,-because-each-takes-more-than-1-hour-to-complete-due-to-the-size-of-the-dataset!">&#182;</a></h3>
 </div>
 </div>

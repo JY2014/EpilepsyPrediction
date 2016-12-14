@@ -11971,12 +11971,12 @@ The model selection procedure and results are shown in details below. &lt;/font&
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="3.2.Model-Selection">3.2.Model Selection<a class="anchor-link" href="#3.2.Model-Selection">&#182;</a></h2><p><p></p>
-<font size = "3"><p>To accurately predict epilepsy status in our imbalaned dataset, we need to consider differnet types of classification errors. Because a naive classifier that says everyone is healthy would have a high accuracy rate, we have to consider a metric other than overall accuracy. So, we evaluated our models based on <b> F1 score </b>, which gives a combined score based on precision and recall. </p></p>
-<p><p></p>
-$$ F1 = \frac{2 \times Precison \times Recall}{Precision + Recall} $$</p>
-<p><p>After fitting several models using cross validation, we found out that <b> weighted logistic regression</b> ( C = 0.001, Class_weight = {0:1, 1:10.0} ) gave us the highest F1 score, around 0.26. Moreover, the accuracy rate was also very high at 0.98. Considering that this is a survey dataset with thousands of features, we were satisfied with the model we got.</p>&lt;/font&gt;</p>
+<h2 id="3.2.Model-Selection">3.2.Model Selection<a class="anchor-link" href="#3.2.Model-Selection">&#182;</a></h2><p></p>
+<font size = "3"><p>To accurately predict epilepsy status in our imbalaned dataset, we need to consider differnet types of classification errors. Because a naive classifier that says everyone is healthy would have a high accuracy rate, we have to consider a metric other than overall accuracy. So, we evaluated our models based on <b> F1 score </b>, which gives a combined score based on precision and recall. </p>
+<p></p>
+$$ F1 = \frac{2 \times Precison \times Recall}{Precision + Recall} $$
 
+<p>After fitting several models using cross validation, we found out that <b> weighted logistic regression</b> ( C = 0.001, Class_weight = {0:1, 1:10.0} ) gave us the highest F1 score, around 0.26. Moreover, the accuracy rate was also very high at 0.98. Considering that this is a survey dataset with thousands of features, we were satisfied with the model we got.</p>
 </div>
 </div>
 </div>
@@ -11996,7 +11996,7 @@ $$ F1 = \frac{2 \times Precison \times Recall}{Precision + Recall} $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">### randomly assign classes</span>
@@ -12025,21 +12025,6 @@ $$ F1 = \frac{2 \times Precison \times Recall}{Precision + Recall} $$</p>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>//anaconda/lib/python2.7/site-packages/sklearn/metrics/classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
-  &#39;precision&#39;, &#39;predicted&#39;, average, warn_for)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -12154,7 +12139,7 @@ $$ F1 = \frac{2 \times Precison \times Recall}{Precision + Recall} $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">### parameters of the best model were recorded for future use</span>
@@ -12172,21 +12157,6 @@ $$ F1 = \frac{2 \times Precison \times Recall}{Precision + Recall} $$</p>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>//anaconda/lib/python2.7/site-packages/sklearn/discriminant_analysis.py:695: UserWarning: Variables are collinear
-  warnings.warn(&#34;Variables are collinear&#34;)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
