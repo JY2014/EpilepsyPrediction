@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Diagnosis</title>
+<title>website_diagnosis</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11748,7 +11748,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
@@ -11776,7 +11776,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <script>
@@ -11837,8 +11837,9 @@ $( document ).ready(code_toggle);
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Chapter-4.-Predicting-Epilepsy-Status">Chapter 4. Predicting Epilepsy Status<a class="anchor-link" href="#Chapter-4.-Predicting-Epilepsy-Status">&#182;</a></h1><hr>
-<p>After the missing values were imputed, models were built to predict epilepsy status using all the other questions as predictors. 
-more introduction and summary here</p>
+<p><font size="3"><p>After the missing values were imputed, models were built to predict epilepsy status using the survey data. Multiple classification models were tuned, including Linear Discriminant Analysis (LDA), Quadratic Discriminant Anlysis (QDA), Weighted Logistic Regression and Random Forest. Due to that the dataset is highly imbalanced with the ratio of epilepsy to non-epilepsy respondents of 1 : 100, we tuned the class weight or priors in addition to regularization parameters, and determined to use F1 score instead of the overall accuracy rate to evaluate our models.</p></p>
+<p><p></p>
+The model selection procedure and results are shown in details below. &lt;/font&gt;</p>
 
 </div>
 </div>
@@ -11885,11 +11886,12 @@ more introduction and summary here</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Outline">Outline<a class="anchor-link" href="#Outline">&#182;</a></h2><p><font size = '3'></p>
+<p><font size = '3'></p>
 <ul>
-<li><a href="#1.Read-the-imputed-dataset">1. Read the imputed dataset</a></li>
-<li><a href="#2.Model-Selection">2. Model Selection</a></li>
-<li><a href="#3.Model-Comparison">3. Model Comparison</a></li>
+<li><a href="#4.1.Read-the-imputed-dataset">4.1. Read the imputed dataset</a></li>
+<li><a href="#4.2.Model-Selection">4.2. Model Selection</a></li>
+<li><a href="#4.3.Model-Comparison">4.3. Model Comparison</a></li>
+<li><a href="#4.4.Feature-Importance">4.4. Feature Importance</a></li>
 </ul>
 <hr>
 
@@ -11911,23 +11913,12 @@ more introduction and summary here</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.1.Read-the-imputed-dataset">4.1.Read the imputed dataset<a class="anchor-link" href="#4.1.Read-the-imputed-dataset">&#182;</a></h3><p>Need some explanation on every step, to make it look less strange</p>
+<hr>
+<h2 id="4.1.Read-the-imputed-dataset">4.1.Read the imputed dataset<a class="anchor-link" href="#4.1.Read-the-imputed-dataset">&#182;</a></h2><p><p></p>
+<font size = "3">The imputed data set saved from the previous chapter was read in. The respondents who did not provide information to the epilepsy questions were removed from the analysis, and one-hot encoding was applied to categorical variables.</font></p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -11980,7 +11971,11 @@ more introduction and summary here</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="2.Model-Selection">2.Model Selection<a class="anchor-link" href="#2.Model-Selection">&#182;</a></h3><p>more about the general approach</p>
+<h2 id="4.2.Model-Selection">4.2.Model Selection<a class="anchor-link" href="#4.2.Model-Selection">&#182;</a></h2><p><p></p>
+<font size = "3"><p>As our goal is to accurately predict epilepsy status for diagnosis purpose, we need to consider both true positive and true negative. Therefore, instead of just taking the overall accuracy rate (true positive) into account, we evaluated our models based on F1 score, which combines the information of both precision and recall. </p></p>
+<p><p></p>
+$$ F1 = \frac{2 \times Precison \times Recall}{Precision + Recall} $$</p>
+<p><p>After fitting several models using cross validation, we found out that weighted logistic regression ( C = 0.001, Class_weight = {0:1, 1:10.0} ) would give us the highest F1 score, which reached around 0.26. Moreover, the accuracy rate was also very high, whcih was around 0.98. Considering that this is a survey dataset with thousands of features, we were satisfied with the model we got.</p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -11991,8 +11986,52 @@ more introduction and summary here</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>LDA
-more discription on each model</li>
+<li><font size = "4"> <b>Baseline Models</b></font>
+<p></p>
+  <font size = "3"><p>If observations are randomly assigned to the epilepsy or non-epilepsy groups, the overall accuracy rate is 0.5, and the F1 score 0.02. If all the observations are classified into the non-epilepsy group, which is a non-weighted logisctic regression model does, the overall accuracy rate is 0.99. However, the F1 score is almost zero. The result is consistent with the fact that the classes are highly imbalance in this dataset. Given our goal of detecting epilepsy patients, F1-score is a better measure than the overall accuracy rate. </p></font></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">### randomly assign classes</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">90539</span><span class="p">)</span>
+
+<span class="c1">## accuracy</span>
+<span class="c1"># print &quot;accuracy: &quot;, np.mean(y_pred == df_y_array)</span>
+<span class="c1"># print &quot;F1:&quot;, metrics.f1_score(df_y_array, y_pred)</span>
+<span class="c1"># print &quot;precision: &quot;, metrics.precision_score(df_y_array, y_pred)</span>
+<span class="c1"># print &quot;recall: &quot;, metrics.recall_score(df_y_array, y_pred)</span>
+
+<span class="c1">### simple non-weighted logistic regression</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s2">&quot;y_pred_simplelog.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">90539</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="c1">## accuracy</span>
+<span class="c1"># print &quot;accuracy: &quot;, np.mean(y_pred == df_y_array)</span>
+<span class="c1"># print &quot;F1:&quot;, metrics.f1_score(df_y_array, y_pred)</span>
+<span class="c1"># print &quot;precision: &quot;, metrics.precision_score(df_y_array, y_pred)</span>
+<span class="c1"># print &quot;recall: &quot;, metrics.recall_score(df_y_array, y_pred)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><font size = "4"> <b>Linear Discriminant Analysis (LDA) </b></font>
+<p></p>
+  <font size = "3"><p>We performed Linear Discriminant Analysis (LDA) using five-fold cross-validation. The priors were tuned to accommodate the class imbalance. The best model were chosen based on the F1 score, which generated an overall accuracy rate of 0.98, F1 score of 0.25. </p></font></li>
 </ul>
 
 </div>
@@ -12055,7 +12094,9 @@ more discription on each model</li>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>QDA</li>
+<li><font size = "4"> <b>Quadratic Discriminant Analysis (QDA)</b></font>
+<p></p>
+  <font size = "3"><p>We performed Quadratic Discriminant Analysis (QDA) using five-fold cross-validation. The regularization parameters and priors were tuned to accommodate the class imbalance and large number of predictors. The best model was selected based on F1 scores. The best QDA model generated an accuracy rate of 0.12 and F1 score of 0.02. The low accuracy and F1 score is due to a high recall of 0.93.</p></font></li>
 </ul>
 
 </div>
@@ -12120,7 +12161,9 @@ more discription on each model</li>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Logistic regression (Subsampling)</li>
+<li><font size = "4"> <b> Logistic regression (with subsampling)</b></font>
+<p></p>
+  <font size = "3"><p>We performed Quadratic Discriminant Analysis (QDA) using five-fold cross-validation. We tuned several parameters for logistic regression, including the regularization parameter $C$, class weights and penalty types (L1 or L2). Furthermore, we encountered the problem of high computational requirement during the process of fitting logistic regression to the dataset, because the dataset includes more than 90,000 entries and 1,500 features. In order to allocate our time and computational capacity more efficiently, we randomly selected a subsample of the non-epilepsy group to use in the analysis. We tested the subsample size of different ratios of non-epilepsy to epilepsy respondents, including 10:1 and 20:1. The subsample was combined with the epilepsy group for the model selection. The optimal values of the parameters were selected based on five-fold cross-validation, and the model was evaluated on the entire dataset. The best logistic regression model generates an F1 score of 0.26 and an overall accuracy of 0.97.</p></font></li>
 </ul>
 
 </div>
@@ -12153,7 +12196,8 @@ more discription on each model</li>
 <span class="n">x_health</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">y_health</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
 
-<span class="c1"># sample 19340 healthy patients (healthy : epilepsy = 20 : 1)</span>
+<span class="c1"># sample 19340 healthy patients (if healthy : epilepsy = 20 : 1)</span>
+<span class="c1"># sample 9670 healthy patients (if healthy : epilepsy = 10 : 1)</span>
 <span class="c1"># the data has already been shuffled</span>
 <span class="n">x_health</span> <span class="o">=</span> <span class="n">x_health</span><span class="p">[:</span><span class="mi">19341</span><span class="p">]</span>
 <span class="n">y_health</span> <span class="o">=</span> <span class="n">y_health</span><span class="p">[:</span><span class="mi">19341</span><span class="p">]</span>
@@ -12190,67 +12234,6 @@ more discription on each model</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Now adjust class ratio to be 10:1.</span>
-<span class="c1"># random shuffle the rows</span>
-<span class="n">n</span> <span class="o">=</span> <span class="n">df_x_array</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">perm</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">perm</span><span class="p">)</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">df_x_array</span><span class="p">[</span><span class="n">perm</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">df_y_array</span><span class="p">[</span><span class="n">perm</span><span class="p">]</span>
-
-<span class="c1"># Resubsample 10:1 first</span>
-<span class="c1"># extract epilepsy patients data</span>
-<span class="n">x_epi</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">y</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">y_epi</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">y</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1"># healthy patients data</span>
-<span class="n">x_health</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">y_health</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="c1"># sample 9670 healthy patients (healthy : epilepsy = 10 : 1)</span>
-<span class="c1"># the data has already been shuffled</span>
-<span class="n">x_health</span> <span class="o">=</span> <span class="n">x_health</span><span class="p">[:</span><span class="mi">9671</span><span class="p">]</span>
-<span class="n">y_health</span> <span class="o">=</span> <span class="n">y_health</span><span class="p">[:</span><span class="mi">9671</span><span class="p">]</span>
-
-<span class="c1"># combine the epilepsy and sampled healthy data</span>
-<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">x_epi</span><span class="p">,</span> <span class="n">x_health</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">y_epi</span><span class="p">,</span> <span class="n">y_health</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># shuffle the combined data</span>
-<span class="n">n3</span> <span class="o">=</span> <span class="n">x2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">perm2</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">n3</span><span class="p">)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">perm2</span><span class="p">)</span>
-
-<span class="n">x2</span> <span class="o">=</span> <span class="n">x2</span><span class="p">[</span><span class="n">perm2</span><span class="p">]</span>
-<span class="n">y2</span> <span class="o">=</span> <span class="n">y2</span><span class="p">[</span><span class="n">perm2</span><span class="p">]</span>
-
-<span class="c1"># CV to tune the parameters, including C, &#39;l2/l1&#39;, Class_weight</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">Log</span><span class="p">()</span>
-<span class="n">skf</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">shuffle</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
-<span class="n">C</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
-<span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">weight_list_dict</span> <span class="o">=</span> <span class="p">[{</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="p">]}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">weights</span><span class="p">))]</span>
-<span class="n">grid_model_2</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="n">c</span><span class="p">,</span> <span class="s1">&#39;class_weight&#39;</span><span class="p">:</span> <span class="n">weight_list_dict</span><span class="p">},</span> 
-                          <span class="n">cv</span>  <span class="o">=</span> <span class="n">skf</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;f1&#39;</span><span class="p">)</span>
-<span class="n">grid_model_2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
-<span class="n">log_2</span> <span class="o">=</span> <span class="n">grid_model_2</span><span class="o">.</span><span class="n">best_estimator_</span>
-
-<span class="n">lg_2</span> <span class="o">=</span> <span class="n">Log</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">class_weight</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mf">10.0</span><span class="p">})</span>
-<span class="c1"># Then use logistic regression(C = 0.0001, class_weight = {0: 1, 1: 10.0}) to fit the whole dataset</span>
-<span class="n">predicted_2</span> <span class="o">=</span> <span class="n">cross_val_predict</span><span class="p">(</span><span class="n">lg_2</span><span class="p">,</span> <span class="n">df_x_array</span><span class="p">,</span> <span class="n">df_y_array</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">skf</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -12278,7 +12261,9 @@ more discription on each model</li>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Random forest</li>
+<li><font size = "4"> <b>Random forest</b></font>
+<p></p>
+  <font size = "3"><p>We also performed random forest using five-fold cross-validation. The tuned parameters include 'number of trees', 'class weights' and 'max_depth', and the best model was selected based on F1 scores. The best Random Forest model had an overall accuracy rate of 0.98, with F1 score to be 0.19. The F1 score was lower compared to the best weighted logistic regression.</li>
 </ul>
 
 </div>
@@ -12354,9 +12339,8 @@ more discription on each model</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.3.Model-Comparison">4.3.Model Comparison<a class="anchor-link" href="#4.3.Model-Comparison">&#182;</a></h3><p>talk about what criteria were used to compare, and how we evaluated them. And lead to the results</p>
+<h2 id="4.3.Model-Comparison">4.3.Model Comparison<a class="anchor-link" href="#4.3.Model-Comparison">&#182;</a></h2><p><font size="3">After the best parameters were selected for Linear Discriminant Analysis (LDA), Quadratic Discriminant Analysis (QDA), Logistic Regression and Random Forest. The results from all the models were compared, and the best model was selected based on the highest F1 score. The regularized weighted logistic regression provided the highest F1 score of 0.26 as well as a comparabily high accuracy rate of 0.97. Therefore, <b>the regularized weighted logistic regression was selected to be the best model for the prediction of epilepsy diagnosis.</b></p>
 <p><p></p></p>
-<p><font size="3"><b> Figure 1. title.</b></font></p>
 
 </div>
 </div>
@@ -13537,8 +13521,9 @@ width=300
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font size="3"><b> ROC plot <font></p>
-<p><font size="3"><b> Figure 2. title.</b></font></p>
+<p><p><font size="3"><b> ROC plot of the models</b></font></p></p>
+<p><p><font size="3"> Receiver Operating Characteristic (ROC) curves of the models were plotted. ROC is a graphical plot that illustrates the performance of a classifier system as the discrimination threshold varies. The curve is created by plotting the true positive rate (TPR) against the false positive rate (FPR) at different threshold values. The ROC curve hugging the upper left corner suggests that the model performs well on the classification. </p>&lt;/font&gt;</p>
+
 </div>
 </div>
 </div>
@@ -14154,7 +14139,75 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Important-features-list">Important features list<a class="anchor-link" href="#Important-features-list">&#182;</a></h3><p>Based on the comparison above, we decide to choose weighted logistic regression model to indentify risk factors through coefficients</p>
+<h2 id="4.4.Feature-Importance">4.4.Feature Importance<a class="anchor-link" href="#4.4.Feature-Importance">&#182;</a></h2><p><font size="3"> Based on the comparison above, we decided to choose the weighted logistic regression model to indentify risk factors associated with epilepsy. Higher absolute value of the coefficient of a feature suggests that the feature is more associated with the response variable. However, the top-ranked features in the list are probably caused by epilepsy instead of being able to predict epilepsy, which also reflects the limitation of our dataset as a single-point observation. Therefore, it would limit the prediction function of our model in real world status.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
+<p><font size="3"><b> The table summarizes the 10 questions with the highest importance in the model.</b></font></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th>Rank</th>
+<th style="text-align:left">Question Topic           </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:left">Current Developmental Delay</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:left">Ever Diagnosed Developmental Delay</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:left">Learning Disability</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:left">Ever Diagnosed Developmental Delay</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align:left">Individualized Education Program</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align:left">Learning Disability</td>
+</tr>
+<tr>
+<td>7</td>
+<td style="text-align:left">Individualized Education Program</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align:left">Developmental Delay Severity</td>
+</tr>
+<tr>
+<td>9</td>
+<td style="text-align:left">Current Developmental Delay</td>
+</tr>
+<tr>
+<td>10</td>
+<td style="text-align:left">Learning Disability Severity</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
 </div>
 </div>
@@ -14192,11 +14245,11 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%%</span><span class="k">html</span>
-&lt;a href=&quot;http://www.harvard.edu&quot; target=&quot;_self&quot;&gt;Back to the Home Page&lt;/a&gt;
+&lt;a href=&quot;jy2014.github.io/EpilepsyPrediction/Imputation.html&quot; target=&quot;_self&quot;&gt;Chapter 3. Data Imputation&lt;/a&gt;
 </pre></div>
 
 </div>
@@ -14210,7 +14263,7 @@ AAAAAElFTkSuQmCC
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<a href="http://www.harvard.edu" target="_self">Back to the Home Page</a>
+<a href="jy2014.github.io/EpilepsyPrediction/Imputation.html" target="_self">Chapter 3. Data Imputation</a>
 </div>
 
 </div>
@@ -14221,11 +14274,11 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%%</span><span class="k">html</span>
-&lt;a href=&quot;http://www.harvard.edu&quot; target=&quot;_self&quot;&gt;Next Chapter&lt;/a&gt;
+&lt;a href=&quot;jy2014.github.io/EpilepsyPrediction/QualityOfLife.html&quot; target=&quot;_self&quot;&gt;Chapter 5. Quality of Life&lt;/a&gt;
 </pre></div>
 
 </div>
@@ -14239,7 +14292,7 @@ AAAAAElFTkSuQmCC
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<a href="http://www.harvard.edu" target="_self">Next Chapter</a>
+<a href="jy2014.github.io/EpilepsyPrediction/QualityOfLife.html" target="_self">Chapter 5. Quality of Life</a>
 </div>
 
 </div>
@@ -14254,7 +14307,7 @@ AAAAAElFTkSuQmCC
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%%</span><span class="k">html</span>
-&lt;a href=&quot;http://www.harvard.edu&quot; target=&quot;_self&quot;&gt;Back to the Home Page&lt;/a&gt;
+&lt;a href=&quot;https://jy2014.github.io/EpilepsyPrediction/Home.html&quot; target=&quot;_self&quot;&gt;Back to the Home Page&lt;/a&gt;
 </pre></div>
 
 </div>
