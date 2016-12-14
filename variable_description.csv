@@ -1,0 +1,299 @@
+,variable,descriptions
+1,IDNUMR,ID number for this household
+2,STATE,State of residence
+3,MSA_STAT,"Metropolitan Statistical Area (Only in states that meet the 500,000 threshold)"
+4,TOTKIDS4,How many people less than 18 years old live in this household (top coded to 4)
+5,AGEPOS4,Birth position of the S.C relative to other children in the household
+6,AGEYR_CHILD,AGE IN YEARS
+7,FLG_06_MNTH,is less than 6 months in age (when FLG_06_MNTH = 1)
+8,FLG_18_MNTH,is less than 18 months in age (when FLG_18_MNTH = 1)
+9,SEX,Derived -Sex of Selected Child
+10,RELATION,Derived -Respondent's Relationship to Selected Child
+11,PLANGUAGE,Derived -Primary Language in Household
+12,K2Q01,"In general, how would you describe [S.C.]'s health? Would you say [his/her] health is excellent, very good, good, fair, or poor?"
+13,K2Q01_D,"How would you describe the condition of [S.C.]'s teeth: excellent, very good, good, fair, or poor?"
+14,K2Q02R,How tall is [S.C.] now? (STANDARDIZED TO INCHES)
+15,HGHT_FLG,indicating sample child's height was bottom or top coded
+16,K2Q03R,How much does [S.C.] weigh now? (STANDARDIZED TO POUNDS)
+17,WGHT_FLG,indicating sample child's weight was bottom or top coded
+18,BMICLASS,Derived. BMI for age classification for sample child
+19,K2Q04R,What was [S.C.]'s birth weight -(STANDARDIZED TO OUNCES)
+20,BWGHT_FLG,indicating sample child's birth weight was bottom or top coded
+21,K2Q10,"Does [S.C.] currently need or use medicine prescribed by a doctor, other than vitamins?"
+22,K2Q11,"Is [his/her] need for prescription medicine because of ANY medical, behavioral, or other health condition?"
+23,K2Q12,Is this a condition that has lasted or is expected to last 12 months or longer?
+24,K2Q13,"Does [S.C.] need or use more medical care, mental health, or educational services than is usual for most children of the same age?"
+25,K2Q14,"Is [his/her] need for medical care, mental health or educational services because of ANY medical, behavioral, or other health condition?"
+26,K2Q15,Is this a condition that has lasted or is expected to last 12 months or longer?
+27,K2Q16,Is [S.C.] limited or prevented in any way in [his/her] ability to do the things most children of the same age can do?
+28,K2Q17,"Is [his/her] limitation in abilities because of ANY medical, behavioral, or other health condition?"
+29,K2Q18,Is this a condition that has lasted or is expected to last 12 months or longer?
+30,K2Q19,"Does [S.C.] need or get special therapy, such as physical, occupational, or speech therapy?"
+31,K2Q20,"Is [his/her] need for special therapy because of ANY medical, behavioral, or other health condition?"
+32,K2Q21,Is this a condition that has lasted or is expected to last 12 months or longer?
+33,K2Q22,"Does [S.C.] have any kind of emotional, developmental, or behavioral problem for which [he/she] needs treatment or counseling?"
+34,K2Q23,"Has [his/her] emotional, developmental or behavioral problem lasted or is it expected to last 12 months or longer?"
+35,CSHCN,Child with Special Health Care Need
+36,K2Q30A,"Has a doctor, health care provider, teacher, or school official ever told you [S.C.] had a learning disability?"
+37,K2Q30B,Does [S.C.] currently have a learning disability?
+38,K2Q30C,"Would you describe [his/her] learning disability as mild, moderate, or severe?"
+39,K2Q30D,"Because of [his/her] learning disability, does [S.C.] need or receive any special arrangements, adaptations, or accommodations in school (or day care)?"
+40,K2Q31A,"Has a doctor or other health care provider ever told you that [S.C.] had Attention Deficit Disorder or Attention Deficit Hyperactive Disorder, that is, ADD or ADHD?"
+41,K2Q32A,Has a doctor or other health care provider ever told you that [S.C.] had depression?
+42,K2Q33A,Has a doctor or other health care provider ever told you that [S.C.] had anxiety problems?
+43,K2Q34A,"Has a doctor or other health care provider ever told you that [S.C.] had behavioral or conduct problems, such as Oppositional Defiant Disorder or Conduct Disorder?"
+44,K2Q35A,"Has a doctor or other health care provider ever told you that [S.C.] had Autism, Asperger's Disorder, Pervasive Developmental Disorder, or other Autism Spectrum Disorder?"
+45,K2Q36A,Has a doctor or other health care provider ever told you that [S.C.] had any developmental delay that affects [his/her] ability to learn?
+46,K2Q37A,"Has a doctor or other health care provider ever told you that [S.C.] had stuttering, stammering, or other speech problems?"
+47,K2Q40A,Has a doctor or other health care provider ever told you that [S.C.] had Asthma?
+48,K2Q41A,Has a doctor or other health care provider ever told you that [S.C.] had Diabetes?
+49,K2Q38A,Has a doctor or other health care provider ever told you that [S.C.] had Tourette Syndrome?
+50,K2Q42A,Has a doctor or other health care provider ever told you that [S.C.] had Epilepsy or seizure disorder?
+51,K2Q43A,Has a doctor or other health care provider ever told you that [S.C.] had hearing problems?
+52,K2Q44A,Has a doctor or other health care provider ever told you that [S.C.] had vision problems that cannot be corrected with glasses or contact lenses?
+53,K2Q45A,"Has a doctor or other health care provider ever told you that [S.C.] had bone, joint, or muscle problems?"
+54,K2Q46A,Has a doctor or other health care provider ever told you that [S.C.] had a brain injury or concussion?
+55,K2Q31B,Does [S.C.] currently have ADD or ADHD?
+56,K2Q31C,"Would you describe [his/her] ADD or ADHD as mild, moderate, or severe?"
+57,K2Q31D,Is [S.C.] currently taking medication for ADD or ADHD? H:\Data\NSCH 2007\PUF01\create_formatted_frequencies.lst 3 2007 NSCH Public Use File Variables The CONTENTS Procedure Variables in Creation Order # Variable Type Len Format Label
+58,K2Q32B,Does [S.C.] currently have depression?
+59,K2Q32C,"Would you describe [his/her] depression as mild, moderate, or severe?"
+60,K2Q33B,Does [S.C.] currently have anxiety problems?
+61,K2Q33C,"Would you describe [his/her] anxiety problems as mild, moderate, or severe?"
+62,K2Q34B,Does [S.C.] currently have behavioral or conduct problems?
+63,K2Q34C,"Would you describe [his/her] behavioral or conduct problems as mild, moderate, or severe?"
+64,K2Q35B,Does [S.C.] currently have Autism or ASD?
+65,K2Q35C,"Would you describe [his/her] Autism or ASD as mild, moderate, or severe?"
+66,K2Q36B,Does [S.C.] currently have developmental delay problems?
+67,K2Q36C,"Would you describe [his/her] developmental delay problems as mild, moderate, or severe?"
+68,K2Q37B,Does [S.C.] currently have speech problems?
+69,K2Q37C,"Would you describe [his/her] speech problems as mild, moderate, or severe?"
+70,K2Q40B,Does [S.C.] currently have Asthma?
+71,K2Q40C,"Would you describe [his/her] Asthma as mild, moderate, or severe?"
+72,K2Q41B,Does [S.C.] currently have Diabetes?
+73,K2Q41C,"Would you describe [his/her] Diabetes as mild, moderate, or severe?"
+74,K2Q38B,Does [S.C.] currently have Tourette Syndrome?
+75,K2Q38C,"Would you describe [his/her] Tourette Syndrome as mild, moderate, or severe?"
+76,K2Q42B,Does [S.C.] currently have Epilepsy or seizure disorder?
+77,K2Q42C,"Would you describe [his/her] Epilepsy or seizure disorder as mild, moderate, or severe?"
+78,K2Q43B,Does [S.C.] currently have hearing problems?
+79,K2Q43C,"Would you describe [his/her] hearing problems as mild, moderate, or severe?"
+80,K2Q44B,Does [S.C.] currently have vision problems?
+81,K2Q44C,"Would you describe [his/her] vision problems as mild, moderate, or severe?"
+82,K2Q45B,"Does [S.C.] currently have bone, joint, or muscle problems?"
+83,K2Q45C,"Would you describe [his/her] bone, joint, or muscle problems as mild, moderate, or severe?"
+84,K2Q45DX01,"Are [S.C.]'s current problems related to [his/her] bones, joints, or muscles -Bones."
+85,K2Q45DX02,"Are [S.C.]'s current problems related to [his/her] bones, joints, or muscles -Joints."
+86,K2Q45DX03,"Are [S.C.]'s current problems related to [his/her] bones, joints, or muscles -Muscles."
+87,K2Q46B,Does [S.C.] currently have a brain injury?
+88,K2Q46C,"Would you describe [his/her] brain injury as mild, moderate, or severe?"
+89,K2Q47A,"During the past 12 months, have you been told by a doctor or other health care provider that [S.C.] had hay fever or any kind of respiratory allergy?"
+90,K2Q48A,"During the past 12 months, have you been told by a doctor or other health care provider that [S.C.] had any kind of food or digestive allergy?"
+91,K2Q49A,"During the past 12 months, have you been told by a doctor or other health care provider that [S.C.] had Eczema or any kind of skin allergy?"
+92,K2Q50A,"During the past 12 months, have you been told by a doctor or other health care provider that [S.C.] had migraine headaches?"
+93,K2Q51A,"During the past 12 months, have you been told by a doctor or other health care provider that [S.C.] had three or more ear infections?"
+94,K2Q47C,"Would you describe [his/her] respiratory allergy as mild, moderate, or severe?"
+95,K2Q48C,"Would you describe [his/her] food or digestive allergy as mild, moderate, or severe?"
+96,K2Q49C,"Would you describe [his/her] Eczema or skin allergy as mild, moderate, or severe?"
+97,K2Q50C,"Would you describe [his/her] headaches as mild, moderate, or severe?"
+98,K2Q51C,"Would you describe [his/her] ear infections as mild, moderate, or severe?"
+99,K2Q52,"To the best of your knowledge, did [S.C.] have a toothache within the past 6 months?"
+100,K2Q53,"To the best of your knowledge, did [S.C.] have decayed teeth or cavities within the past 6 months?"
+101,K2Q54,"To the best of your knowledge, did [S.C.] have broken teeth within the past 6 months?"
+102,K2Q55,"To the best of your knowledge, did [S.C.] have bleeding gums within the past 6 months?"
+103,K2Q60A,"Do [S.C.]'s medical, behavioral, or other health conditions interfere with [his/her] ability to participate in play with other children?"
+104,K2Q60B,"Do [S.C.]'s medical, behavioral, or other health conditions interfere with [his/her] ability to go on outings, such as to the park, library, zoo, shopping, church, restaurants, or family gatherings?"
+105,K2Q60C,"Do [S.C.]'s medical, behavioral, or other health conditions interfere with [his/her] ability to make friends?"
+106,K2Q61A,"Do [S.C.]'s medical, behavioral, or other health conditions interfere with [his/her] ability to attend school on a regular basis?"
+107,K2Q61B,"Do [S.C.]'s medical, behavioral, or other health conditions interfere with [his/her] ability to participate in sports, clubs, or other organized activities?"
+108,K2Q61C,"Do [S.C.]'s medical, behavioral, or other health conditions interfere with [his/her] ability to make friends?"
+109,K2Q81,Has [S.C.] received a tetanus booster shot or Td or Tdap shot since [he/she] turned 11 years of age?
+110,K2Q82,"Has [S.C.] ever received a meningitis shot, sometimes called MENACTRA or MENOMUNE?"
+111,K2Q83,Has [S.C.] ever received any HPV shots?
+112,K2Q84,Please tell me how many HPV shots [S.C.] has received.
+113,K2Q85,Did a doctor or health care provider recommend that [S.C.] receive HPV shots?
+114,K3Q01,"Does [S.C.] have any kind of health care coverage, including health insurance, prepaid plans such as HMOs, or government plans such as Medicaid?"
+115,K3Q02,"[Is that coverage / Is [he/she] insured by] Medicaid or the State Children's Health Insurance Program, SCHIP? In this state, the program is sometimes called [FILL MEDICAID NAME, SCHIP NAME]."
+116,K3Q03,"[During the past 12 months / Since [his/her] birth], was there any time when [he/she] was not covered by ANY health insurance? H:\Data\NSCH 2007\PUF01\create_formatted_frequencies.lst 4 2007 NSCH Public Use File Variables The CONTENTS Procedure Variables in Creation Order # Variable Type Len Format Label"
+117,K3Q04,"[During the past 12 months / Since [his/her] birth], was there any time when [he/she] had health care coverage?"
+118,K3Q20,Does [S.C.]'s health insurance offer benefits or cover services that meet [his/her] needs?
+119,K3Q22,Does [S.C.]'s health insurance allow [him/her] to see the health care providers [he/she] needs?
+120,K3Q21A,"Not including health insurance premiums or costs that are covered by insurance, do you pay any money for [S.C.]'s health care?"
+121,K3Q21B,How often are these costs reasonable?
+122,K4Q01,Is there a place that [S.C.] USUALLY goes when [he/she] is sick or you need advice about [his/her] health?
+123,K4Q02R,Derived -Place of Health Care after Back Coding Other Place Response
+124,K4Q04,Do you have one or more persons you think of as [S.C.]'s personal doctor or nurse?
+125,K4Q20R,"How many times did [S.C.] see a doctor, nurse, or other health care provider for preventive medical care such as a physical exam or well-child checkup?"
+126,K4Q21R,"[During the past 12 months / Since [his/her] birth], how many times did [S.C.] see a dentist for preventive dental care, such as check-ups and dental cleanings?"
+127,K4Q22,"During the past 12 months, has [S.C.] received any treatment or counseling from a mental health professional?"
+128,K4Q23,"During the past 12 months, has [S.C.] taken any medication because of difficulties with [his/her] emotions, concentration, or behavior?"
+129,K4Q24,"[During the past 12 months / Since [his/her] birth], did [S.C.] see a specialist [other than a mental health professional]?"
+130,K4Q25,"[During the past 12 months / Since [his/her] birth], did you or a doctor think that [he/she] needed to see a specialist?"
+131,K4Q26,"[During the past 12 months / Since [his/her] birth], how much of a problem, if any, was it to get the care from the specialists that [S.C.] needed?"
+132,K4Q27,"[During the past 12 months / Since [his/her] birth], was there any time when [S.C.] needed health care but it was delayed or not received?"
+133,K4Q28X01,What type of care was delayed or not received -Medical Care.
+134,K4Q28X02,What type of care was delayed or not received -Dental Care.
+135,K4Q28X03,What type of care was delayed or not received -Mental Health Services.
+136,K4Q28X04,What type of care was delayed or not received -Something Else.
+137,K5Q10,"[During the past 12 months / Since [his/her] birth], did [S.C.] need a referral to see any doctors or receive any services?"
+138,K5Q11,"Was getting referrals a big problem, a small problem, or not a problem?"
+139,K5Q20,Does anyone help you arrange or coordinate [S.C.]'s care among the different doctors or services that [he/she] uses?
+140,K5Q21,"[During the past 12 months / Since [his/her] birth], have you felt that you could have used extra help arranging or coordinating [S.C.]'s care among the different health care providers or services?"
+141,K5Q22,"[During the past 12 months / Since [his/her] birth], how often did you get as much help as you wanted with arranging or coordinating [S.C.]'s care?"
+142,K5Q30,"Overall, are you very satisfied, somewhat satisfied, somewhat dissatisfied, or very dissatisfied with the communication among [S.C.]'s doctors and other health care providers?"
+143,K5Q31,"Do [S.C.]'s doctors or other health care providers need to communicate with [his/her] [child care providers, early intervention program, school, special education program, vocational education program]?"
+144,K5Q32,"Overall, are you very satisfied, somewhat satisfied, somewhat dissatisfied, or very dissatisfied with that communication?"
+145,K5Q40,"[During the past 12 months / Since [his/her] birth], how often did [S.C.]'s doctors and other health care providers spend enough time with [him/her]?"
+146,K5Q41,"[During the past 12 months / Since [his/her] birth], how often did [S.C.]'s doctors and other health care providers listen carefully to you?"
+147,K5Q42,"When [S.C.] is seen by doctors or other health care providers, how often are they sensitive to your family's values and customs?"
+148,K5Q43,"[During the past 12 months / Since [his/her] birth], how often did you get the specific information you needed from [S.C.]'s doctors and other health care providers?"
+149,K5Q44,"[During the past 12 months / Since [his/her] birth], how often did [S.C.]'s doctors or other health care providers help you feel like a partner in [his/her] care?"
+150,K5Q45,"[During the past 12 months / Since [S.C.]'s birth], did you [or [S.C.]] need an interpreter to help speak with [his/her] doctors or other health care providers?"
+151,K5Q46,"When you [or [S.C.]] needed an interpreter, how often were you able to get someone other than a family member to help you speak with [his/her] doctors or other health care providers?"
+152,K6Q01,"Do you have any concerns about [S.C.]'s learning, development, or behavior?"
+153,K6Q02,"Are you concerned a lot, a little, or not at all about how [S.C.] talks and makes speech sounds?"
+154,K6Q03,"Are you concerned a lot, a little, or not at all about how [he/she] understands what you say?"
+155,K6Q04,"Are you concerned a lot, a little, or not at all about how [he/she] uses [his/her] hands and fingers to do things?"
+156,K6Q05,"Are you concerned a lot, a little, or not at all about how [he/she] uses [his/her] arms and legs?"
+157,K6Q06,"Are you concerned a lot, a little, or not at all about how [he/she] behaves?"
+158,K6Q07,"Are you concerned a lot, a little, or not at all about how [he/she] gets along with others?"
+159,K6Q08,"Are you concerned a lot, a little, or not at all about how [he/she] is learning to do things for [himself/herself]?"
+160,K6Q09,"Are you concerned a lot, a little, or not at all about how [he/she] is learning pre-school or school skills?"
+161,K6Q10,"[During the past 12 months / Since [S.C.]'s birth], did [S.C.]'s doctors or other health care providers ask if you have concerns about [his/her] learning, development, or behavior? H:\Data\NSCH 2007\PUF01\create_formatted_frequencies.lst 5 2007 NSCH Public Use File Variables The CONTENTS Procedure Variables in Creation Order # Variable Type Len Format Label"
+162,K6Q11,"Did [his/her] doctors or other health care providers give you specific information to address your concerns about [his/her] learning, development, or behavior?"
+163,K6Q12,"Did a doctor or other health care provider have you fill out a questionnaire about specific concerns or observations you may have about [S.C.]'s development, communication, or social behaviors?"
+164,K6Q13A,Did this questionnaire ask about your concerns or observations about how [S.C.] talks or makes speech sounds?
+165,K6Q13B,Did this questionnaire ask about your concerns or observations about how [S.C.] interacts with you and others?
+166,K6Q14A,Did this questionnaire ask about your concerns or observations about words and phrases [S.C.] uses and understands?
+167,K6Q14B,Did this questionnaire ask about your concerns or observations about how [S.C.] behaves and gets along with you and others?
+168,K6Q15,Does [S.C.] have any developmental problems for which [he/she] has a written intervention plan called an [Individualized Family Services Plan or an IFSP / Individualized Education Program or IEP]?
+169,K6Q20,Does [S.C.] receive care for at least 10 hours per week from someone not related to [him/her]?
+170,K6Q20BX01,"Was this care provided in your home, someone else's home, or in a center such as a school or day care facility -Own home."
+171,K6Q20BX02,"Was this care provided in your home, someone else's home, or in a center such as a school or day care facility -Someone else's home."
+172,K6Q20BX03,"Was this care provided in your home, someone else's home, or in a center such as a school or day care facility -Center."
+173,K6Q21,Does [S.C.] receive care for at least 10 hours per week from a relative other than [you or] [his/her] parents or guardians?
+174,K6Q22,Was this care provided in your home or somewhere else?
+175,K6Q25A,"During the past month, did you need child care for [S.C.]?"
+176,K6Q25B,Does [S.C.]'s behavior limit your ability to find child care for [him/her]?
+177,K6Q25C,Does [S.C.]'s health limit your ability to find child care for [him/her]?
+178,K6Q26,"During the past month, how many times have you had to make different arrangements for child care at the last minute due to circumstances beyond your control?"
+179,K6Q27,"[During the past 12 months / Since [S.C.]'s birth] did you or anyone in the family have to quit a job, not take a job, or greatly change your job because of problems with child care for [S.C.]?"
+180,K6Q30,[During the past 12 months / Since [S.C.]'s birth] has [S.C.] been injured and required medical attention?
+181,K6Q31X01,"Did the injury occur at home, at child care, or some other place -Home."
+182,K6Q31X02,"Did the injury occur at home, at child care, or some other place -Child care."
+183,K6Q31X03,"Did the injury occur at home, at child care, or some other place -Some other place."
+184,K6Q40,Was [S.C.] ever breastfed or fed breast milk?
+185,K6Q41R,How old was [he/she] when [he/she] completely stopped breastfeeding or being fed breast milk? (STANDARDIZED TO AGE IN DAYS AND TOP CODED)
+186,K6Q42R,old was the SC when [he/she] was first fed formula? (STANDARDIZED TO AGE IN DAYS)
+187,K6Q43R,old was SC when [he/she] was first fed anything other than breast milk or formula? (STANDARDIZED TO AGE IN DAYS)
+188,K6Q60,"During the past week, how many days did you or other family members read to [S.C.]?"
+189,K6Q61,"During the past week, how many days did you or other family members tell stories or sing songs to [S.C.]?"
+190,K6Q63,"During the past week, how many days did [S.C.] play with other children [his/her] age?"
+191,K6Q64,"During the past week, how many days did you or any family member take [S.C.] on any kind of outing, such as to the park, library, zoo, shopping, church, restaurants, or family gatherings?"
+192,K6Q65,"On an average weekday, about how much time does [S.C.] usually watch TV or watch videos?"
+193,K6Q65A,Period.
+194,K7Q01,"[During the last school year / Currently], what kind of school [was/is] [S.C.] enrolled in?"
+195,K7Q01F,"At any time during the past 12 months, was [S.C.] enrolled in a public school, a private school, or home school?"
+196,K7Q02R,"During the past 12 months, that is, since [CURRENT MONTH, 1 YEAR AGO], about how many days did [S.C.] miss school because of illness or injury?"
+197,K7Q04R,"During the past 12 months, how many times has [S.C.]'s school contacted you or another adult in your household about any problems [he/she] is having with school?"
+198,K7Q05,"Since starting kindergarten, has [he/she] repeated any grades?"
+199,K7Q11,"Does [S.C.] have a health problem, condition, or disability for which [he/she] has a written intervention plan called an Individualized Education Program or IEP?"
+200,K7Q30,"During the past 12 months, was [S.C.] on a sports team or did [he/she] take sports lessons after school or on weekends?"
+201,K7Q31,"During the past 12 months, did [he/she] participate in any clubs or organizations after school or on weekends?"
+202,K7Q32,"During the past 12 months, did [he/she] participate in any other organized events or activities?"
+203,K7Q33,"During the past 12 months, how often did you attend events or activities that [S.C.] participated in?"
+204,K7Q34,"Regarding [S.C.]'s friends, would you say that you have met all of [his/her] friends, most of [his/her] friends, some of [his/her] friends, or none of [his/her] friends?"
+205,K7Q35,"During the past week, did [S.C.] take care of [himself/herself] or stay alone without an adult or teenager, even for a small amount of time?"
+206,K7Q36,"During the past week, how many hours did [S.C.] take care of [himself/herself]?"
+207,K7Q37,"During the past 12 months, how often has [S.C.] been involved in any type of community service or volunteer work at school, church, or in the community?"
+208,K7Q38,"During the past week, did [S.C.] earn money from any work, including regular jobs as well as babysitting, cutting grass, or other occasional work?"
+209,K7Q39,"During the past week, how many hours did [S.C.] work for pay? H:\Data\NSCH 2007\PUF01\create_formatted_frequencies.lst 6 2007 NSCH Public Use File Variables The CONTENTS Procedure Variables in Creation Order # Variable Type Len Format Label"
+210,K7Q40,"During the past week, on how many nights did [S.C.] get enough sleep for a child [his/her] age?"
+211,K7Q41,"During the past week, on how many days did [S.C.] exercise, play a sport, or participate in physical activity for at least 20 minutes that made [him/her] sweat and breathe hard?"
+212,K7Q50,"On an average weekday, about how much time does [he/she] usually spend reading for pleasure?"
+213,K7Q50A,Period.
+214,K7Q51,"On an average weekday, about how much time does [S.C.] use a computer for purposes other than schoolwork?"
+215,K7Q51A,Period.
+216,K7Q60,"On an average weekday, about how much time does [S.C.] usually watch TV, watch videos, or play video games?"
+217,K7Q60A,Period.
+218,K7Q61,Are there family rules about what television programs [he/she] is allowed to watch?
+219,K7Q62,Is there a television in [S.C.]'s bedroom?
+220,K7Q70,[He/She] argues too much
+221,K7Q71,[He/She] bullies or is cruel or mean to others
+222,K7Q72,[He/She] shows respect for teachers and neighbors
+223,K7Q73,[He/She] gets along well with other children
+224,K7Q74,[He/She] is disobedient
+225,K7Q75,"[He/She] is stubborn, sullen, or irritable"
+226,K7Q76,[He/She] tries to understand other people's feelings
+227,K7Q77,"[He/She] tries to resolve conflicts with classmates, family, or friends"
+228,K7Q78,[He/She] feels worthless or inferior
+229,K7Q79,"[He/She] is unhappy, sad, or depressed"
+230,K7Q80,"[He/She] is withdrawn, and does not get involved with others"
+231,K7Q82,[He/She] cares about doing well in school
+232,K7Q83,[He/She] does all required homework
+233,K8Q12R,About how often does [S.C.] attend a religious service?
+234,K8Q11,"During the past week, on how many days did all the family members who live in the household eat a meal together?"
+235,K8Q21,How well can you and [S.C.] share ideas or talk about things that really matter?
+236,K8Q30,"In general, how well do you feel you are coping with the day to day demands of [parenthood / raising children]?"
+237,K8Q31,"During the past month, how often have you felt [S.C.] is much harder to care for than most children [his/her] age?"
+238,K8Q32,"During the past month, how often have you felt [he/she] does things that really bother you a lot?"
+239,K8Q34,"During the past month, how often have you felt angry with [him/her]?"
+240,K8Q35,Is there someone that you can turn to for day-to-day emotional help with [parenthood / raising children]?
+241,TOTADULT3,Total number of adults in the household -Top Coded at 3 or more
+242,FAMSTRUCT,Family structure type
+243,K9Q16R,How old [are you / is [S.C.]'s [MOTHER TYPE]]?
+244,MARCOH_PAR,Derived: Marital/Cohabitation Status of Child's Parent(s) in the Household
+245,MARSTAT_PAR,Derived: Legal Marital Status of Child's Parent(s) in the Household
+246,MARCOH_RESP,"Derived: Marital/Cohabitation Status of NSCH Respondent 247 MARSTAT_ Num 8 MARSTAT. Derived: Legal Marital Status of NSCH Respondent RESP 248 K9Q18 Num 3 K9Q18_. Would you say that your relationship is completely happy, very happy, fairly happy, or not too happy? 249 K9Q20 Num 3 K7Q12_. Would you say that, in general, [[S.C.]'s [MOTHER TYPE]'s / your] health is excellent, very good, good, fair, or poor? 250 K9Q21 Num 3 K7Q12_. Would you say that, in general, [[S.C.]'s [FATHER TYPE]'s / your] health is excellent, very good, good, fair, or poor? 251 K9Q22 Num 3 K7Q12_. Would you say that, in general, your health is excellent, very good, good, fair, or poor? (non-parent respondent) 252 K9Q23 Num 3 K7Q12_. Would you say that, in general, [[S.C.]'s [MOTHER TYPE]'s / your] mental and emotional health is excellent, very good, good, fair, or poor? 253 K9Q24 Num 3 K7Q12_. Would you say that, in general, [[S.C.]'s [FATHER TYPE]'s / your] mental and emotional health is excellent, very good, good, fair, or poor? 254 K9Q25 Num 3 K7Q12_. Would you say that, in general, your mental and emotional health is excellent, very good, good, fair, or poor? (non-parent respondent) 255 K9Q30 Num 3 K6Q60_. During the past week, on how many days did [you / [S.C.]'s [MOTHER TYPE]] exercise, play sports, or participate in physical activity for at least 20 minutes that made [you/her] sweat and breathe hard? 256 K9Q31 Num 3 K6Q60_. During the past week, on how many days did [you / [S.C.]'s [FATHER TYPE]] exercise, play sports, or participate in physical activity for at least 20 minutes that made [you/him] sweat and breathe hard? 257 K9Q32 Num 3 K6Q60_. During the past week, on how many days did you exercise, play sports, or participate in physical activity for at least 20 minutes that made you sweat and breathe hard? (non-parent respondent) 258 K9Q40 Num 3 K2Q19_. Does anyone living in your household use cigarettes, cigars, or pipe tobacco? 259 K9Q41 Num 3 K2Q19_. Does anyone smoke inside [S.C.]'s home? 260 K10Q11 Num 3 K2Q19_. Do sidewalks or walking paths exist in your neighborhood? 261 K10Q12 Num 3 K2Q19_. Does a park or playground area exist in your neighborhood? 262 K10Q13 Num 3 K2Q19_. Does a recreation center, community center, or boys' or girls' club exist in your community? 263 K10Q14 Num 3 K2Q19_. Does a library or bookmobile exist in your community? 264 K10Q20 Num 3 K2Q19_. In your neighborhood, is there litter or garbage on the street or sidewalk? 265 K10Q22 Num 3 K2Q19_. How about poorly kept or [dilapidated/rundown] housing? 266 K10Q23 Num 3 K2Q19_. How about vandalism such as broken windows or graffiti? H:\Data\NSCH 2007\PUF01\create_formatted_frequencies.lst 2007 NSCH 7 Public Use File Variables The CONTENTS Procedure Variables in Creation Order # Variable Type Len Format Label 267 K10Q30 Num 3 K10Q30_. ""People in this neighborhood help each other out."" Would you say that you...? 268 K10Q31 Num 3 K10Q30_. ""We watch out for each other's children in this neighborhood."" Would you say that you...? 269 K10Q32 Num 3 K10Q30_. ""There are people I can count on in this neighborhood."" Would you say that you...? 270 K10Q34 Num 3 K10Q30_. ""If my child were outside playing and got hurt or scared, there are adults nearby who I trust to help my child."" Would you say that you...? 271 K10Q40 Num 3 K10Q40_. How often do you feel [S.C.] is safe in your community or neighborhood? 272 K10Q41 Num 3 K10Q40_. How often do you feel [he/she] is safe at school? 273 HISPANIC Num 3 HISPANIC. Derived -Edited K11Q01 after Back Coding Other Race Response 274 RACER Num 8 RACER. Race classification for all states (White,Black,Mutiracial,Other) 275 RACE_HI Num 8 RACEHI. Race classification for Hawaii 276 RACEASIA Num 8 RACEASN. Race classification of target child with Asian specification for select states 277 RACEAIAN Num 8 RACENAAN. Race classification of target child with American Indian/Alaskan Native specification for select states 278 K11Q03R Num 8 K2Q19_. At any time during the past 12 months, did SC receive services from any Indian Health Service hospital or clinic? [for states ALASKA ARIZONA MONTANA NEW MEXICO NORTH DAKOTA OKLAHOMA SOUTH DAKOTA] 279 EDUC_MOMR Num 8 EDUCATIONR. What is the highest grade or year of school [you have / [S.C.]'s [MOTHER TYPE] has] completed? 280 EDUC_DADR Num 8 EDUCATIONR. What is the highest grade or year of school [you have / [S.C.]'s [FATHER TYPE] has] completed? 281 EDUC_RESR Num 8 EDUCATIONR. What is the highest grade or year of school you have completed? (non-parent respondent) 282 K11Q30 Num 3 K2Q19_. [Were you / Was [S.C.]'s [MOTHER TYPE]] born in the United States? 283 K11Q31 Num 3 K2Q19_. [Were you / Was [S.C.]'s [FATHER TYPE]] born in the United States? 284 K11Q32 Num 3 K2Q19_. Were you born in the United States? (non-parent respondent) 285 K11Q33 Num 3 K2Q19_. And how about [S.C.]? (born in the United States) 286 K11Q34AR Num 8 K11Q34AR. How long [have you / has [S.C.]'s [MOTHER TYPE]] been in the United States? -Standardized to Years 287 K11Q35AR Num 8 K11Q35AR. How long [have you / has [S.C.]'s [FATHER TYPE]] been in the United States? -Standardized to Years 288 K11Q36AR Num 8 K11Q36AR. How long have you been in the United States? (non-parent respondent) -Standardized to Years 289 K11Q37AR Num 8 K11Q37AR. How long has [S.C.] been in the United States? -Standardized to Years 290 K11Q43R Num 8 K11Q43R. How many times has [S.C.] ever moved to a new address? 291 K11Q50 Num 3 K2Q19_. Was anyone in the household employed at least 50 weeks out of the past 52 weeks? 292 POVERTY_ Num 3 POVERTY_LEVELR. Derived -Poverty Level of this Household Based on DHHS Poverty Guidelines -8 Categories LEVELR 293 K11Q60 Num 3 K2Q19_. At any time during the past 12 months, even for one month, did anyone in this household receive any cash assistance from a state or county welfare program, such as [state TANF name]? 294 K11Q61 Num 3 K2Q19_. During the past 12 months, did [[S.C.] / any child in the household] receive Food Stamps? 295 K11Q62 Num 3 K2Q19_. During the past 12 months, did [[S.C.] / any child in the household] receive free or reduced-cost breakfasts or lunches at school? 296 OTH_LANG Num 3 OTH_LANG. Derived -Interview Conducted in Language Other than English 297 SUMMER Num 3 LANG1_. Derived -Interview Was Completed in June, July, or August 298 NSCHWT Num 8 NSCH Final Weight H:\Data\NSCH 2007\PUF01\create_formatted_frequencies.ls"
+247,MARSTAT_RESP,
+248,K9Q18,"Would you say that your relationship is completely happy, very happy, fairly happy, or not too happy?"
+249,K9Q20,"Would you say that, in general, [[S.C.]'s [MOTHER TYPE]'s / your] health is excellent, very good, good, fair, or poor?"
+250,K9Q21,"Would you say that, in general, [[S.C.]'s [FATHER TYPE]'s / your] health is excellent, very good, good, fair, or poor?"
+251,K9Q22,"Would you say that, in general, your health is excellent, very good, good, fair, or poor? (non-parent respondent)"
+252,K9Q23,"Would you say that, in general, [[S.C.]'s [MOTHER TYPE]'s / your] mental and emotional health is excellent, very good, good, fair, or poor?"
+253,K9Q24,"Would you say that, in general, [[S.C.]'s [FATHER TYPE]'s / your] mental and emotional health is excellent, very good, good, fair, or poor?"
+254,K9Q25,"Would you say that, in general, your mental and emotional health is excellent, very good, good, fair, or poor? (non-parent respondent)"
+255,K9Q30,"During the past week, on how many days did [you / [S.C.]'s [MOTHER TYPE]] exercise, play sports, or participate in physical activity for at least 20 minutes that made [you/her] sweat and breathe hard?"
+256,K9Q31,"During the past week, on how many days did [you / [S.C.]'s [FATHER TYPE]] exercise, play sports, or participate in physical activity for at least 20 minutes that made [you/him] sweat and breathe hard?"
+257,K9Q32,"During the past week, on how many days did you exercise, play sports, or participate in physical activity for at least 20 minutes that made you sweat and breathe hard? (non-parent respondent)"
+258,K9Q40,"Does anyone living in your household use cigarettes, cigars, or pipe tobacco?"
+259,K9Q41,Does anyone smoke inside [S.C.]'s home?
+260,K10Q11,Do sidewalks or walking paths exist in your neighborhood?
+261,K10Q12,Does a park or playground area exist in your neighborhood?
+262,K10Q13,"Does a recreation center, community center, or boys' or girls' club exist in your community?"
+263,K10Q14,Does a library or bookmobile exist in your community?
+264,K10Q20,"In your neighborhood, is there litter or garbage on the street or sidewalk?"
+265,K10Q22,How about poorly kept or [dilapidated/rundown] housing?
+266,K10Q23,How about vandalism such as broken windows or graffiti? H:\Data\NSCH 2007\PUF01\create_formatted_frequencies.lst 2007 NSCH 7 Public Use File Variables The CONTENTS Procedure Variables in Creation Order # Variable Type Len Format Label
+267,K10Q30,"""People in this neighborhood help each other out."" Would you say that you...?"
+268,K10Q31,"""We watch out for each other's children in this neighborhood."" Would you say that you...?"
+269,K10Q32,"""There are people I can count on in this neighborhood."" Would you say that you...?"
+270,K10Q34,"""If my child were outside playing and got hurt or scared, there are adults nearby who I trust to help my child."" Would you say that you...?"
+271,K10Q40,How often do you feel [S.C.] is safe in your community or neighborhood?
+272,K10Q41,How often do you feel [he/she] is safe at school?
+273,HISPANIC,Derived -Edited K11Q01 after Back Coding Other Race Response
+274,RACER,"Race classification for all states (White,Black,Mutiracial,Other)"
+275,RACE_HI,Race classification for Hawaii
+276,RACEASIA,Race classification of target child with Asian specification for select states
+277,RACEAIAN,Race classification of target child with American Indian/Alaskan Native specification for select states
+278,K11Q03R,"At any time during the past 12 months, did SC receive services from any Indian Health Service hospital or clinic? [for states ALASKA ARIZONA MONTANA NEW MEXICO NORTH DAKOTA OKLAHOMA SOUTH DAKOTA]"
+279,EDUC_MOMR,What is the highest grade or year of school [you have / [S.C.]'s [MOTHER TYPE] has] completed?
+280,EDUC_DADR,What is the highest grade or year of school [you have / [S.C.]'s [FATHER TYPE] has] completed?
+281,EDUC_RESR,What is the highest grade or year of school you have completed? (non-parent respondent)
+282,K11Q30,[Were you / Was [S.C.]'s [MOTHER TYPE]] born in the United States?
+283,K11Q31,[Were you / Was [S.C.]'s [FATHER TYPE]] born in the United States?
+284,K11Q32,Were you born in the United States? (non-parent respondent)
+285,K11Q33,And how about [S.C.]? (born in the United States)
+286,K11Q34AR,How long [have you / has [S.C.]'s [MOTHER TYPE]] been in the United States? -Standardized to Years
+287,K11Q35AR,How long [have you / has [S.C.]'s [FATHER TYPE]] been in the United States? -Standardized to Years
+288,K11Q36AR,How long have you been in the United States? (non-parent respondent) -Standardized to Years
+289,K11Q37AR,How long has [S.C.] been in the United States? -Standardized to Years
+290,K11Q43R,How many times has [S.C.] ever moved to a new address?
+291,K11Q50,"Was anyone in the household employed at least 50 weeks out of the past 52 weeks? 292 POVERTY_ Num 3 POVERTY_LEVELR. Derived -Poverty Level of this Household Based on DHHS Poverty Guidelines -8 Categories LEVELR 293 K11Q60 Num 3 K2Q19_. At any time during the past 12 months, even for one month, did anyone in this household receive any cash assistance from a state or county welfare program, such as [state TANF name]? 294 K11Q61 Num 3 K2Q19_. During the past 12 months, did [[S.C.] / any child in the household] receive Food Stamps? 295 K11Q62 Num 3 K2Q19_. During the past 12 months, did [[S.C.] / any child in the household] receive free or reduced-cost breakfasts or lunches at school? 296 OTH_LANG Num 3 OTH_LANG. Derived -Interview Conducted in Language Other than English 297 SUMMER Num 3 LANG1_. Derived -Interview Was Completed in June, July, or August 298 NSCHWT Num 8 NSCH Final Weight H:\Data\NSCH 2007\PUF01\create_formatted_frequencies.ls"
+292,POVERTY_LEVELR,
+293,K11Q60,"At any time during the past 12 months, even for one month, did anyone in this household receive any cash assistance from a state or county welfare program, such as [state TANF name]?"
+294,K11Q61,"During the past 12 months, did [[S.C.] / any child in the household] receive Food Stamps?"
+295,K11Q62,"During the past 12 months, did [[S.C.] / any child in the household] receive free or reduced-cost breakfasts or lunches at school?"
+296,OTH_LANG,Derived -Interview Conducted in Language Other than English
+297,SUMMER,"Derived -Interview Was Completed in June, July, or August"
+298,NSCHWT,Final Weight H:\Data\NSCH 2007\PUF01\create_formatted_frequencies.lst
