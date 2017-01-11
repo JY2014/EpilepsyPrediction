@@ -2,6 +2,9 @@
 ### Harvard University Stat121a Final Project 
 ### Jingyi Yu, Alexandra Ding, Ziao Lin
 
+### Webpage: https://jy2014.github.io/EpilepsyPrediction/Home.html
+
+
 
 ## PLEASE READ THIS IF YOU ARE TRYING TO RUN THE CODE ##
 
