@@ -1,5 +1,5 @@
 # Predicting Epilepsy Diagnosis and Impact Using National Survey of Children's Health
-### Harvard University Stat121a Final Project 
+### Harvard University Stat121a Introduction to Data Science Final Project 
 ### Jingyi Yu, Alexandra Ding, Ziao Lin
 
 ## Webpage: https://jy2014.github.io/EpilepsyPrediction/Home.html
