@@ -2,12 +2,13 @@
 ### Harvard University Stat121a Introduction to Data Science Final Project 
 ### Jingyi Yu, Alexandra Ding, Ziao Lin
 
-## Webpage: https://jy2014.github.io/EpilepsyPrediction/Home.html
+## This project is presented at https://jy2014.github.io/EpilepsyPrediction/Home.html
 <br>
 </br>
+___
 ## PLEASE READ THIS IF YOU ARE TRYING TO RUN THE CODE ##
 
-Before attempting to run code, you need to **UNZIP THE DATA FILES!**
+Before attempting to run code, unzip the data files:
 
 [We could not upload the CSV files without zipping because they are too large. ]
 * NSCH_2007.zip
@@ -15,11 +16,6 @@ Before attempting to run code, you need to **UNZIP THE DATA FILES!**
 * NSCH_2007_droppedADP_codeLMN_na.csv.zip
 * imputed_PovertyLevel_RF.zip
 
-
-### RELEVANT CODE FOR RUNNING THE MODELS:
-* website_data_imputation.ipynb : performs missing data imputation; displays “Imputation” section of website
-* website_diagnosis.ipynb : Runs classifiers to classify epilepsy status. Displays “Diagnosis” section of website
-* website_QOL.ipynb: Runs classifiers to classify Quality of Life within epilepsy patients. Displays “QOL” section of website.
 
 ## List of files in this repository:
 ### Code:
