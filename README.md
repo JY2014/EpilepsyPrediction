@@ -11,7 +11,7 @@ Seizures and epilepsy are the most common neurological disorders among children 
 
 ## Please read this if you are trying to run the code:
 
-Before attempting to run code, unzip the data files.
+**Before attempting to run code, unzip the data files.**
 
 [We could not upload the CSV files without zipping because they are too large. ]
 * NSCH_2007.zip
