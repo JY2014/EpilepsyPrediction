@@ -7,7 +7,6 @@ Seizures and epilepsy are the most common neurological disorders among children 
 ## This project is presented at https://jy2014.github.io/EpilepsyPrediction/Home.html
 <br>
 </br>
-___
 
 
 ## Please read this if you are trying to run the code:
